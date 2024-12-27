@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea Output</title>
+    <style>
+        #output {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            white-space: pre-wrap; /* Menjaga format baris baru */
+        }
+    </style>
+</head>
+<body>
+    <label for="multiLineInput">Input text (multi-line):</label>
+    <textarea id="multiLineInput" rows="5" cols="30" placeholder="Type something..."></textarea>
+    
+    <button id="showOutput">Show Output</button>
+    <div id="output"></div>
+
+    <script>
+        const textarea = document.getElementById('multiLineInput');
+        const output = document.getElementById('output');
+        const button = document.getElementById('showOutput');
+
+        button.addEventListener('click', () => {
+            output.textContent = textarea.value; // Menampilkan teks termasuk baris baru
+        });
+    </script>
+</body>
+</html>

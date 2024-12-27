@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #FFA200;
+    --grey: #E6E6E6;
+    --blue: #005DFF;
+    --red: #CC3300;
+    --black: #1E1E1E;
+    --blackl: #00000047;
+    --white: #ffff;
+}
+
+body { 
+    
+    margin: 0;
+    background-color: var(--white);
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.container .left {
+    background-color: var(--white);
+    padding: 25px;
+    display: flex;
+    height: 390px;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container .left .select {
+    background-color: var(--orange);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.container .left .select:hover {
+    background-color: darkgray;
+}
+
+.container .left .option {
+    background-color: var(--blue);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 550;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.container .left .option:hover {
+    background-color: darkgray;
+}
+
+.container .right h3 {
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+
+.container .right .content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 130%;
+    border: 1px solid #ddd;
+}
+  
+.container .right .content table  th {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    padding: 16px;
+} 
+.container .right .content table td {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    padding: 16px;
+}
+
+.container .right .content table ,th, td {
+    text-align: center;
+}
+
+  
+.container .right .content table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.fa-trash {
+    color: #b40202;
+}
+
+.fa-eye {
+    color: black;
+}
+.fa-trash:hover {
+    background-color: darkgrey;
+}
+.fa-eye {
+    color: black;
+}
+.fa-eye:hover {
+    background-color: darkgray;
+}
+.fa-pen-to-square:hover {
+    background-color: darkgray;
+
+}
+
+
+.container .right .button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.container .right .button .button-1 .info {
+    background-color: #6de669;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    font-size: 15px;
+}
+
+.container .right .button .button-1 .info:hover {
+    background-color: darkgreen;
+}
