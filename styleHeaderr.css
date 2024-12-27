@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #FFA200;
+    --grey: #E6E6E6;
+    --blue: #005DFF;
+    --red: #CC3300;
+    --black: #1E1E1E;
+    --blackl: #00000047;
+    --white: #ffff;
+}
+
+.role {
+    text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--orange);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    font-family: 'Times New Roman', sans-serif;
+    padding: 0px 40px 0px 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .content img {
+    height: 55px;
+    width: 55px;
+    margin: 5px;
+}
+
+.navbar .content h4 {
+    font-size: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile .profile-text {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.profile .profile-text .fullname {
+    font-weight: 600;
+}
+
+.profile .profile-text .role {
+    font-weight: 550;
+    font-size: 14px;
+    color: var(--white);
+}
+
+.profile .profile-img {
+    position: relative;
+}
+
+.profile .profile-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile .profile-img .fa-bars {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--white);
+}
+
+/* Dropdown menu styling */
+.profile .profile-img .dropdown-menu {
+    font-family: 'Arial', sans-serif;
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    flex-direction: column;
+    z-index: 10; /* Make sure it appears above other elements */
+}
+
+.profile .profile-img .dropdown-menu a {
+    color: var(--black);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.profile .profile-img .dropdown-menu a:hover {
+    background-color: var(--blackl);
+    border-radius: 8px;
+}
+
+.profile .profile-img .dropdown-menu a i {
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: var(--orange);
+    color: var(--white);
+    line-height: 2.3rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.profile .profile-img .dropdown-menu.active {
+    display: block;
+}
+

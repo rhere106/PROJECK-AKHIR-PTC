@@ -1,0 +1,261 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variabel warna untuk memudahkan pengaturan tema */
+:root {
+    --orange: #FFA200; /* Warna oranye */
+    --grey: #E6E6E6; /* Warna abu-abu */
+    --blue: #005DFF; /* Warna biru */
+    --red: #CC3300; /* Warna merah */
+    --black: #1E1E1E; /* Warna hitam */
+    --blackl: #00000047; /* Warna hitam dengan transparansi */
+    --white: #ffff; /* Warna putih */
+}
+
+/* Gaya dasar untuk body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--white);
+}
+
+/* Mengatur tata letak utama */
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+/* Container untuk menampung elemen-elemen utama */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Jarak antar elemen */
+}
+
+/* Sidebar kiri */
+.container .left {
+    background-color: var(--white);
+    padding: 25px;
+    display: flex;
+    height: 390px;
+    flex-direction: column;
+    gap: 8px; /* Jarak antar link */
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+/* Link utama di sidebar */
+.container .left .select {
+    background-color: var(--orange);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.container .left .select:hover {
+    background-color: darkgray; /* Efek hover */
+}
+
+/* Link tambahan di sidebar */
+.container .left .option {
+    background-color: var(--blue);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 550;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.container .left .option:hover {
+    background-color: darkgray; /* Efek hover */
+}
+
+/* Heading di bagian kanan */
+.container .right h3 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+/* Container pengumuman */
+.container .right .container-pengumuman {
+    overflow: hidden;
+    width: 800px;
+    margin: 20px auto;
+}
+
+/* Slider untuk pengumuman */
+.container .right .container-pengumuman .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Efek transisi saat slider bergeser */
+}
+
+/* Konten pengumuman */
+.container .right .content {
+    min-width: 800px; /* Lebar setiap slide */
+    background-color: var(--grey);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left; /* Sesuaikan teks agar rata kiri */
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten terlalu panjang */
+    max-height: 300px; /* Batasi tinggi konten agar konsisten */
+    white-space: pre-wrap; /* Pertahankan format teks multiline */
+}
+
+/* Gaya scrollbar khusus (opsional) */
+.container .right .content::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar */
+}
+
+.container .right .content::-webkit-scrollbar-thumb {
+    background-color: var(--orange); /* Warna scrollbar */
+    border-radius: 10px; /* Bentuk sudut scrollbar */
+}
+
+.container .right .content::-webkit-scrollbar-track {
+    background-color: var(--grey); /* Warna latar belakang scrollbar */
+}
+
+/* Tombol di bagian kanan */
+.container .right .button {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Tombol untuk menambahkan informasi */
+.container .right .button .button-1 .info {
+    background-color: #6de669; /* Warna hijau */
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    font-size: 15px;
+}
+
+/* Tombol untuk menghapus pengumuman */
+.container .right .button .button-1 .del {
+    background-color: var(--red); /* Warna merah */
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    font-size: 15px;
+}
+
+/* Tombol navigasi slider */
+.container .right .button .button-2 a {
+    text-decoration: none;
+    color: var(--black);
+    margin-right: 10px;
+}
+
+/* Tombol "Prev" disembunyikan secara default */
+.container .right .button .button-2 .prev {
+    visibility: hidden;
+}
+
+/* Tampilkan tombol "Prev" saat dibutuhkan */
+.container .right .button .button-2 .prev.show {
+    visibility: visible;
+}
+
+/* Tombol "Next" disembunyikan secara default */
+.container .right .button .button-2 .next {
+    visibility: hidden;
+}
+
+/* Tampilkan tombol "Next" saat dibutuhkan */
+.container .right .button .button-2 .next.show {
+    visibility: visible;
+}
+
+/* Popup untuk formulir tambah pengumuman */
+.popup {
+    background: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.popup .container {
+    background-color: var(--grey);
+    width: 750px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Heading di dalam popup */
+.popup .container h5 {
+    background-color: var(--orange);
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+/* Formulir di dalam popup */
+.popup .container form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+/* Label dalam formulir */
+.popup .container form label {
+    padding: 10px;
+}
+
+/* Input teks multiline */
+.popup .container form textarea {
+    resize: none;
+    border: none;
+    height: 290px;
+    width: 685px;
+    padding: 10px;
+}
+
+/* Tombol di dalam popup */
+.popup .container form .button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Tombol tambah atau batalkan */
+.popup .container form .button button,
+.popup .container form .button a {
+    background-color: #d9d9d9;
+    padding: 8px 40px;
+    border-radius: 10px;
+    border: none;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}

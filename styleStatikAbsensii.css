@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #FFA200;
+    --grey: #E6E6E6;
+    --blue: #005DFF;
+    --red: #CC3300;
+    --black: #1E1E1E;
+    --blackl: #00000047;
+    --white: #ffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: var(--white);
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.container .left {
+    background-color: var(--white);
+    padding: 25px;
+    display: flex;
+    height: 390px;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container .left .select {
+    background-color: var(--orange);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.container .left .select:hover {
+    background-color:darkgray;
+}
+.container .left .option {
+    background-color: var(--blue);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 550;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.container .left .option:hover {
+    background-color:darkgray;
+}
+.container .right h3 {
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+
+.container .right .content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 220%;
+    border: 1px solid #ddd;
+}
+  
+.container .right .content table  th, td {
+    text-align: center;
+    padding: 16px;
+}
+  
+.container .right .content table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.fa-trash {
+    color: #b40202;
+}
+.fa-trash:hover {
+    background-color: darkgrey;
+}
+.fa-eye {
+    color: black;
+}
+.fa-eye:hover {
+    background-color: darkgray;
+}
+.fa-pen-to-square:hover {
+    background-color: darkgray;
+
+}
+
+
+.container .right .button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.container .right .button .button-1 .info {
+    background-color: #6de669;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    font-size: 15px;
+}
+
+.container .right .button .button-1 .info:hover {
+    background-color: darkgreen;
+}
+
+/* .container .right .button .button-1 .del {
+    background-color: #CC3300;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    font-size: 15px;
+} */
+
+
+.popup {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 720px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.popup .container {
+    background-color: var(--grey);
+    width: 630px;
+    height: 210px;
+    position: absolute;
+    top: 185px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.popup .container h5 {
+    background-color: var(--orange);
+    padding: 13px 20px;
+    font-size: 15px;
+}
+
+.popup .container form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 30px;
+}
+
+.popup .container form label {
+    padding: 10px;
+    color: var(--black);
+    margin-bottom: 5px; 
+}
+
+.popup .container form input {
+    height: 30px;
+    width: 420px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.popup .container form select { 
+    border-color: #3d8d40;
+    height: 30px;
+    width: 420px;
+    outline: flex;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    margin-right: 2px;
+}
+.popup .container form table td {
+    padding: 1px 10px;
+    vertical-align: middle;
+}
+
+.popup .container form table td label {
+    margin-bottom: 5px; 
+}
+.popup .container form .button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.popup .container form .button button, .popup .container form .button a  {
+    background-color: #d9d9d9;
+    padding: 8px 40px;
+    border-radius: 10px;
+    border: none;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.popup .container form .button button:hover{
+    background-color: darkgray;
+}
+.popup .container form .button a:hover{
+    background-color: darkgray;
+}
+
+.popup-hapus {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 633px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.popup-hapus .ayam {
+    background-color: var(--grey);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 165px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-hapus .ayam h5 {
+    background-color: var(--orange);
+    padding: 13px 20px;
+    font-size: 17px;
+}
+
+.popup-hapus .ayam p{
+    padding:13px 20px;
+    font-size: 18px;
+}
+
+.button-hapusnya button {
+    background-color: #d9d9d9;
+    padding: 8px 40px;
+    border-radius: 10px;
+    border: none;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 200px;
+}
+
+.button-hapusnya a {
+    background-color: #d9d9d9;
+    padding: 8px 40px ;
+    border-radius: 10px;
+    border: none;   
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 0px;
+}
+
+.button-hapusnya button:hover {
+    background-color: darkgray;
+}

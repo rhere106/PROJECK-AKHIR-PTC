@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #FFA200;
+    --grey: #E6E6E6;
+    --blue: #005DFF;
+    --red: #CC3300;
+    --black: #1E1E1E;
+    --blackl: #00000047;
+    --white: #ffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: var(--white);
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.container .left {
+    background-color: var(--white);
+    padding: 25px;
+    display: flex;
+    height: 390px;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.container .left .select {
+    background-color: var(--orange);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.container .left .select:hover {
+    background-color: darkgray;
+}
+
+.container .left .option {
+    background-color: var(--blue);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 550;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.container .left .option:hover {
+    background-color: darkgray;
+}
+
+.container .right .content {
+    background-color: var(--grey);
+    width: 750px;
+    height: 399px;
+    margin: 15px 0px;
+    border-radius: 7px;  
+}
+
+.container .right .content h3 {
+    background-color: var(--orange);
+    color: var(--black);
+    padding: 14px 15px;
+    font-size: 16px;
+}
+
+.container .right .content .content-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 35px 60px;
+    gap: 30px;
+}
+
+.container .right .content .content-profile img {
+    width: 180px;
+    height: 200px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container .right .content .content-profile form .form{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.container .right .content .content-profile form .form .label {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.container .right .content .content-profile form .form .label label {
+    margin: 9px 0px;
+    padding: 6px;
+
+}
+
+.container .right .content .content-profile form .form .input {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+}
+
+.container .right .content .content-profile form .form .input input {
+    margin: 8px 0px;
+    padding: 8px;
+    border: none;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.container .right .content .content-profile form .form .input input::-webkit-file-upload-button {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    padding: 5px;
+}
+    
+.container .right .content .content-profile form button {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 5px 0px 0px 240px;
+}
+
+.container .right .content .content-profile form button:hover {
+    background-color: darkgoldenrod;
+}
+

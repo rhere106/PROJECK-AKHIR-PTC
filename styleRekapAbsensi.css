@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #FFA200;
+    --grey: #E6E6E6;
+    --blue: #005DFF;
+    --red: #CC3300;
+    --black: #1E1E1E;
+    --blackl: #00000047;
+    --white: #ffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: var(--white);
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.container .left {
+    background-color: var(--white);
+    padding: 25px;
+    display: flex;
+    height: 390px;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.container .left .select {
+    background-color: var(--orange);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.container .left .select:hover {
+    background-color: darkgray;
+}
+
+.container .left .option {
+    background-color: var(--blue);
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 550;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.container .left .option:hover {
+    background-color: darkgray;
+}
+
+.container .right .content{
+    background-color: var(--grey);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container .right table {
+    width: 100%;
+}
+
+.container .right table th, 
+.container .right table td {
+    background-color: var(--white);
+    padding: 5px 10px;
+    text-align: start;  
+}
+
+.container .right table .daftarhadir {
+    text-align: center; 
+    width: 1000px;
+}
+
+.container .right table .child-2 {
+    width: 400px;
+}
+
+.container .right table .inner {
+   padding: 0;
+   background-color: transparent;
+}
+
+.container .right table .inner-table th, 
+.container .right table .inner-table td {
+    padding: 5px 10px;
+}
+/* ####################################### */
+.container .right .bottom th {
+    text-align: center;
+}
+.container .right .bottom td {
+    text-align: center;
+    height: 30px;
+}
+
+
+.container .right .button {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .right .button .edit {
+    background-color: var(--orange);
+    padding: 5px 50px;
+    border-radius: 10px;
+    border: 2px solid var(--white);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    color: var(--white);
+    text-decoration: none;
+}
+.container .right .button .edit:hover {
+    background-color: darkgoldenrod;
+}
+
+.container .right .button-1 button {
+    background-color: var(--red);
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    color: var(--white);
+    padding: 5px 15px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+.container .right .button-1 button:hover {
+    background-color: darkred;
+}
+
+.container .right .button-1 .next {
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+.popup {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 730px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.popup .container {
+    background-color: var(--grey);
+    width: 700px;
+    height: 450px;
+    position: absolute;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup .container h5 {
+    background-color: var(--orange);
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.popup .container form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+.popup .container form label {
+    padding: 10px;
+}
+
+.popup .container form input {
+    height: 35px;
+    width: 420px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.popup .container form select { 
+    border-color: #3d8d40;
+    height: 30px;
+    width: 420px;
+    outline: flex;
+    border-radius: 10px;
+}
+
+.popup .container form .button-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.popup .container form .button-2 button, .popup .container form .button-2 a  {
+    background-color: #d9d9d9;
+    padding: 8px 40px;
+    border-radius: 10px;
+    border: none;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.popup .container form .button-2 button:hover{
+    background-color: darkgray;
+}
+.popup .container form .button-2 a:hover{
+    background-color: darkgray;
+}
